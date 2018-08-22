@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2454cdaf-a35b-40b6-9e6f-23010e66ffcd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/NeuralNetwork.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/preprocess/Preprocessing.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/util/Util.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/alexjzy.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/day.csv" afterPath="$PROJECT_DIR$/dataset/day.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/hour.csv" afterPath="$PROJECT_DIR$/dataset/hour.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AveragingModels.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_increase_ratio_origin_vs_prediction.pdf" afterPath="$PROJECT_DIR$/test_increase_ratio_origin_vs_prediction.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_origin_vs_prediction.pdf" afterPath="$PROJECT_DIR$/test_origin_vs_prediction.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_origin_vs_prediction_timeline.pdf" afterPath="$PROJECT_DIR$/test_origin_vs_prediction_timeline.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train_increase_ratio_origin_vs_prediction.pdf" afterPath="$PROJECT_DIR$/train_increase_ratio_origin_vs_prediction.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/training_NN.pdf" afterPath="$PROJECT_DIR$/training_NN.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BikeSharing.ipynb" afterPath="$PROJECT_DIR$/BikeSharing.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nn_profit_regist.csv" afterPath="$PROJECT_DIR$/nn_profit_regist.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/totalBikeSharing.csv" afterPath="$PROJECT_DIR$/totalBikeSharing.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bikesharing.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,14 +59,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NeuralNetwork.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NeuralNetwork.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/NeuralNetwork.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7274827">
-              <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
                 <element signature="e#23#58#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AveragingModels.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AveragingModels.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.47331786">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,6 +101,7 @@
         <option value="$PROJECT_DIR$/util/Util.py" />
         <option value="$PROJECT_DIR$/preprocess/Preprocessing.py" />
         <option value="$PROJECT_DIR$/model/NeuralNetwork.py" />
+        <option value="$PROJECT_DIR$/AveragingModels.py" />
       </list>
     </option>
   </component>
@@ -211,7 +224,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../competition/达观数据" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -427,6 +440,9 @@
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2454cdaf-a35b-40b6-9e6f-23010e66ffcd" name="Default" comment="" />
@@ -448,7 +464,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32896653" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329927" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -460,6 +476,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -522,11 +546,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/NeuralNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7274827">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#23#58#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AveragingModels.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47331786">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
