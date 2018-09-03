@@ -33,11 +33,11 @@ def scatter_plot(input, x_col, y_col, model_name, rmse):
 
 
 def timeline_plot(timeline, data, title):
-    colors = ['cornflowerblue', 'orange', 'yellow', 'red', 'purple']
+    colors = ['cornflowerblue', 'orange', 'green', 'purple']
     plt.figure(figsize=(12, 3))
     for i in range(len(data)):
         if i == 0:
-            plt.plot(timeline, data[i], c=colors[i], label='orginial')
+            plt.plot(timeline, data[i], c=colors[i], label='originial')
         else:
             plt.plot(timeline, data[i], c=colors[i])
     plt.ylabel('Value', fontsize=10)
@@ -48,3 +48,18 @@ def timeline_plot(timeline, data, title):
     plt.show()
 
 
+def timeline_plot_overall(timeline, data, title):
+    colors = ['cornflowerblue', 'orange', 'green', 'purple']
+    plt.figure(figsize=(12, 3))
+    labels = ['benchmark', "stacking", "blending"]
+    for i in range(len(data)):
+        if i == 0:
+            plt.plot(timeline, data[i], c=colors[i], label='originial')
+        else:
+            plt.plot(timeline, data[i], c=colors[i], label=labels[i - 1])
+    plt.ylabel('Value', fontsize=10)
+    plt.xlabel('Time', fontsize=10)
+    plt.title(title)
+    plt.savefig('./result/%s.pdf' % title, bbox_inches='tight')
+    plt.legend(loc='lower left')
+    plt.show()

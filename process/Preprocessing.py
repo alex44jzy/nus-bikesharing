@@ -226,7 +226,6 @@ def get_drop_columns_name(target, target_col, exclude):
 
 
 def main(year=2012, month=1, day=1, balance=False, target='cnt'):
-    print(balance)
     df = load_data()
     df = verboseClean(df)
     df = feature_engineering(df)

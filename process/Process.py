@@ -1,7 +1,6 @@
 __author__ = 'alexjzy'
 import sys
 import glob
-import os
 
 sys.path.append('../')
 import xgboost
@@ -13,14 +12,12 @@ import process.Preprocessing as preprocess
 import profit.Profit as profitCalculator
 from keras.models import load_model
 from sklearn.externals import joblib
-from sklearn import linear_model
 from sklearn.ensemble import RandomForestRegressor
 import pandas as pd
-import matplotlib.pyplot as plt
-from util.Util import calc_rmse, scatter_plot, timeline_plot
+from util.Util import calc_rmse, scatter_plot, timeline_plot, timeline_plot_overall
 
 
-def nn_prediction(model_existed=True):
+def nn_prediction(model_existed=True, is_plot=False):
     # get the 1 year train and test dataset
     if model_existed:
         filename = glob.glob(r'./*.h5')[0]
@@ -40,14 +37,15 @@ def nn_prediction(model_existed=True):
     print("ratio rmse: %f" % calc_rmse(result.target_Y_ratio, result.pred_Y_ratio))
     print("profit: %f" % summary)
     print("-------------------------------------------------")
-    # scatter_plot(result, 'pred_Y_ratio', 'target_Y_ratio', 'Neural Network',
-    #              calc_rmse(result.target_Y_ratio, result.pred_Y_ratio))
-    #
-    # scatter_plot(result, 'pred_Y', 'raw_Y', 'Neural Network',
-    #              calc_rmse(result.pred_Y, result.raw_Y))
-    # timeline_plot(test_raw.dteday, [result.raw_Y, result.pred_Y], 'Neural network test prediction vs actual')
-    # timeline_plot(test_raw.dteday, [abs(result.raw_Y - result.pred_Y)], 'Neural network absolute error through timeline')
+    if is_plot:
+        scatter_plot(result, 'pred_Y_ratio', 'target_Y_ratio', 'Neural Network',
+                     calc_rmse(result.target_Y_ratio, result.pred_Y_ratio))
 
+        scatter_plot(result, 'pred_Y', 'raw_Y', 'Neural Network',
+                     calc_rmse(result.pred_Y, result.raw_Y))
+        timeline_plot(test_raw.dteday, [result.raw_Y, result.pred_Y], 'Neural network test prediction vs actual')
+        timeline_plot(test_raw.dteday, [abs(result.raw_Y - result.pred_Y)],
+                      'Neural network absolute error through timeline')
     return nn_net, result, summary
 
 
@@ -59,7 +57,7 @@ def save_model():
     del model
 
 
-def rf_prediction():
+def rf_prediction(is_plot=False):
     cols = train_x.columns.values.tolist()
     lt = ['workingday',
           'weathersit_',
@@ -81,7 +79,6 @@ def rf_prediction():
 
     result.to_csv('./test_rf_1halfyear_bal.csv')
 
-
     features.append(train_x.columns.values.tolist())
     joblib.dump(rf_model, './rf_model.pkl')
     result.to_csv("./result/random_forest_%i-%i-%i.csv" % (year, month, day))
@@ -91,17 +88,18 @@ def rf_prediction():
     print("profit: %f" % summary)
     print("-------------------------------------------------")
     #
-    # scatter_plot(result, 'pred_Y_ratio', 'target_Y_ratio', 'Random Forest',
-    #              calc_rmse(result.target_Y_ratio, result.pred_Y_ratio))
-    #
-    # scatter_plot(result, 'pred_Y', 'raw_Y', 'Random Forest',
-    #              calc_rmse(result.pred_Y, result.raw_Y))
-    # timeline_plot(test_raw.dteday, [abs(result.raw_Y - result.pred_Y)], 'Random forest test prediction vs actual')
+    if is_plot:
+        scatter_plot(result, 'pred_Y_ratio', 'target_Y_ratio', 'Random Forest',
+                     calc_rmse(result.target_Y_ratio, result.pred_Y_ratio))
+
+        scatter_plot(result, 'pred_Y', 'raw_Y', 'Random Forest',
+                     calc_rmse(result.pred_Y, result.raw_Y))
+        timeline_plot(test_raw.dteday, [abs(result.raw_Y - result.pred_Y)], 'Random forest test prediction vs actual')
 
     return result
 
 
-def xgb_prediction():
+def xgb_prediction(is_plot=False):
     xgb_cols = ['holiday', 'workingday', 'temp', 'hum', 'cnt_lag2', 'temp_inc',
                 'cnt_avg_aheadWeek', 'cnt_avg_ahead3days', 'cnt_avg_aheadMonth',
                 'cnt_median_LastWeek', 'cnt_inc_ratio_lag2',
@@ -122,17 +120,17 @@ def xgb_prediction():
     print("ratio rmse: %f" % calc_rmse(result.target_Y_ratio, result.pred_Y_ratio))
     print("profit: %f" % summary)
     print("-------------------------------------------------")
-
-    # scatter_plot(result, 'pred_Y_ratio', 'target_Y_ratio', 'Xgboost',
-    #              calc_rmse(result.target_Y_ratio, result.pred_Y_ratio))
-    # scatter_plot(result, 'pred_Y', 'raw_Y', 'Xgboost',
-    #              calc_rmse(result.pred_Y, result.raw_Y))
-    # timeline_plot(test_raw.dteday, [result.raw_Y, result.pred_Y], 'Xgboost test prediction vs actual')
+    if is_plot:
+        scatter_plot(result, 'pred_Y_ratio', 'target_Y_ratio', 'Xgboost',
+                     calc_rmse(result.target_Y_ratio, result.pred_Y_ratio))
+        scatter_plot(result, 'pred_Y', 'raw_Y', 'Xgboost',
+                     calc_rmse(result.pred_Y, result.raw_Y))
+        timeline_plot(test_raw.dteday, [result.raw_Y, result.pred_Y], 'Xgboost test prediction vs actual')
 
     return result
 
 
-def ensemble_stacking():
+def ensemble_stacking(is_plot=False):
     xgb_param = {
         'n_estimators': 100,
         'learning_rate': 0.09,
@@ -168,17 +166,17 @@ def ensemble_stacking():
     print("profit: %f" % summary)
     print("-------------------------------------------------")
     print(summary)
-    scatter_plot(result, 'pred_Y_ratio', 'target_Y_ratio', 'Stacking',
-                 calc_rmse(result.target_Y_ratio, result.pred_Y_ratio))
-    scatter_plot(result, 'pred_Y', 'raw_Y', 'Stacking',
-                 calc_rmse(result.pred_Y, result.raw_Y))
-    timeline_plot(test_raw.dteday, [result.raw_Y, result.pred_Y], 'Stacking test prediction vs actual')
+    if is_plot:
+        scatter_plot(result, 'pred_Y_ratio', 'target_Y_ratio', 'Stacking',
+                     calc_rmse(result.target_Y_ratio, result.pred_Y_ratio))
+        scatter_plot(result, 'pred_Y', 'raw_Y', 'Stacking',
+                     calc_rmse(result.pred_Y, result.raw_Y))
+        timeline_plot(test_raw.dteday, [result.raw_Y, result.pred_Y], 'Stacking test prediction vs actual')
+    return result
 
 
-
-def blending():
+def blending(is_plot=False):
     _, res_nn, _ = nn_prediction()
-    res_rf = rf_prediction()
     res_xgb = xgb_prediction()
     rr = {}
 
@@ -200,29 +198,61 @@ def blending():
     print(param)
     result, summary = profitCalculator.construct_result(test_y_origin, test_raw.cnt_lag2, optimal_pred, test_y)
     result.to_csv("./result/blending_%i-%i-%i.csv" % (year, month, day))
-    scatter_plot(result, 'pred_Y_ratio', 'target_Y_ratio', 'Blending',
-                 calc_rmse(result.target_Y_ratio, result.pred_Y_ratio))
-    scatter_plot(result, 'pred_Y', 'raw_Y', 'Blending',
-                 calc_rmse(result.pred_Y, result.raw_Y))
-    timeline_plot(test_raw.dteday, [result.raw_Y, result.pred_Y], 'Blending test prediction vs actual')
 
-    # print("blending result:")
-    # print("predict rmse: %f" % calc_rmse(result.raw_Y, result.pred_Y))
-    # print("ratio rmse: %f" % calc_rmse(result.target_Y_ratio, result.pred_Y_ratio))
-    # print("profit: %f" % summary)
-    # print("-------------------------------------------------")
+    print("blending result:")
+    print("predict rmse: %f" % calc_rmse(result.raw_Y, result.pred_Y))
+    print("ratio rmse: %f" % calc_rmse(result.target_Y_ratio, result.pred_Y_ratio))
+    print("profit: %f" % summary)
+    print("-------------------------------------------------")
 
+    if is_plot:
+        scatter_plot(result, 'pred_Y_ratio', 'target_Y_ratio', 'Blending',
+                     calc_rmse(result.target_Y_ratio, result.pred_Y_ratio))
+        scatter_plot(result, 'pred_Y', 'raw_Y', 'Blending',
+                     calc_rmse(result.pred_Y, result.raw_Y))
+        timeline_plot(test_raw.dteday, [result.raw_Y, result.pred_Y], 'Blending test prediction vs actual')
+    return result
+
+
+
+def generate_ensembles_result():
+    stacking_res = ensemble_stacking()
+    actual = stacking_res.raw_Y
+    benchmark = stacking_res.raw_lag
+    stacking_ = stacking_res.pred_Y
+    blending_res = blending()
+    blending_ = blending_res.pred_Y
+
+    timeline_plot_overall(test_raw.dteday, [actual, benchmark, stacking_, blending_], 'Ensemble, benchmark vs actual')
 
 
 if __name__ == '__main__':
+    model_name = input("Please input one model name from (nn, rf, xgb, blend, stacking): ")
     year = 2012
     month = 1
     day = 1
+
     train_x, train_raw, train_y, train_y_origin, test_x, test_raw, test_y, test_y_origin = \
         preprocess.main(year, month, day, False)
-    features = []
-    nn_prediction()
-    # rf_prediction()
-    # xgb_prediction()
-    # ensemble_stacking()
-    # blending()
+
+    if model_name == 'nn':
+        features = []
+        nn_prediction(True, True)
+    elif model_name == 'rf':
+        features = []
+        rf_prediction(True)
+    elif model_name == 'xgb':
+        features = []
+        xgb_prediction(True)
+    elif model_name == 'blend':
+        features = []
+        blending(True)
+    elif model_name == 'stacking':
+        features = []
+        nn_prediction(True, False)
+        rf_prediction(False)
+        xgb_prediction(False)
+        ensemble_stacking(True)
+    else:
+        print('Please input the correct model name!!!!!!!!!!')
+        pass
