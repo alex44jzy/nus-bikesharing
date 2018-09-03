@@ -2,11 +2,11 @@
 
 This is the NUS-ISS Data analytics ensemble CA's python source codes.
 Env & Install:
-- Python3
-- Sklearn
-- Pandas
-- Tensorflow-keras
-- Matiplot
+- python3
+- sklearn
+- pandas
+- tensorflow-keras
+- matplotlib
 
 #### How to run:
 python3 process/Process.py

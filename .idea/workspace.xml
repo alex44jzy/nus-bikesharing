@@ -2,58 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2454cdaf-a35b-40b6-9e6f-23010e66ffcd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2012-0.5year.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2012-1year.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AveragingModels.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/XGBoost cnt test number prediction vs orgrin, total profit=1653167.95.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/XGBoost ratio test dataset prediction vs orgrin.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/XGBoost ratio train dataset prediction vs orgrin.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/errorNan.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/figure/nn_profit_regist.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/figure/test_increase_ratio_origin_vs_prediction.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/figure/test_origin_vs_prediction.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/figure/test_origin_vs_prediction_timeline.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/figure/train_increase_ratio_origin_vs_prediction.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/figure/training_NN.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/neural_network_2012-1-1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nn_model.h5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nn_profit_regist.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/BikeSharing Assignment Report.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/Blending test prediction vs actual.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/Xgboost test prediction vs actual.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/Xgboost test prediction vs orginal, RMSE = 0.346368 (model_name, rmse).pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/Xgboost test prediction vs orginal, RMSE = 0.405640 (model_name, rmse).pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/Xgboost test prediction vs orginal, RMSE = 1135.480152 (model_name, rmse).pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/Xgboost test prediction vs orginal, RMSE = 982.983892 (model_name, rmse).pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/blending_2012-1-1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/blending_2012-7-1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/neural_network_2012-1-1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/neural_network_2012-7-1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/random_forest_2012-1-1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/random_forest_2012-7-1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/stacking_2012-1-1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/stacking_2012-7-1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/xgboost_2012-1-1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/xgboost_2012-7-1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_increase_ratio_origin_vs_prediction.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_origin_vs_prediction.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_origin_vs_prediction_timeline.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/train_increase_ratio_origin_vs_prediction.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/training_NN.pdf" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/util/util.py" afterPath="$PROJECT_DIR$/util/Util.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result/Blending test prediction vs orginal, RMSE = 0.330346 (model_name, rmse).pdf" afterPath="$PROJECT_DIR$/result/Blending test prediction vs orginal, RMSE = 0.330346 (model_name, rmse).pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result/Blending test prediction vs orginal, RMSE = 949.309394 (model_name, rmse).pdf" afterPath="$PROJECT_DIR$/result/Blending test prediction vs orginal, RMSE = 949.309394 (model_name, rmse).pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result/Neural Network test prediction vs orginal, RMSE = 0.321655 (model_name, rmse).pdf" afterPath="$PROJECT_DIR$/result/Neural Network test prediction vs orginal, RMSE = 0.321655 (model_name, rmse).pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result/Neural Network test prediction vs orginal, RMSE = 979.950989 (model_name, rmse).pdf" afterPath="$PROJECT_DIR$/result/Neural Network test prediction vs orginal, RMSE = 979.950989 (model_name, rmse).pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result/Neural network absolute error through timeline.pdf" afterPath="$PROJECT_DIR$/result/Neural network absolute error through timeline.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result/Neural network test prediction vs actual.pdf" afterPath="$PROJECT_DIR$/result/Neural network test prediction vs actual.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result/Stacking test prediction vs actual.pdf" afterPath="$PROJECT_DIR$/result/Stacking test prediction vs actual.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BikeSharing.ipynb" afterPath="$PROJECT_DIR$/BikeSharing.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/process/Preprocessing.py" afterPath="$PROJECT_DIR$/process/Preprocessing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/process/Process.py" afterPath="$PROJECT_DIR$/process/Process.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/totalBikeSharing.csv" afterPath="$PROJECT_DIR$/totalBikeSharing.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="bikesharing.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/process/Preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="227" column="65" selection-start-line="227" selection-start-column="65" selection-end-line="227" selection-end-column="65" />
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
               <folding>
                 <element signature="e#24#42#0" expanded="true" />
               </folding>
@@ -87,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Process.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Process.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/process/Process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3652968">
-              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
                 <element signature="e#23#33#0" expanded="true" />
               </folding>
@@ -99,12 +48,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.5232558">
-                <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <first_editor vertical-scroll-proportion="0.24916944">
+                <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -131,10 +80,8 @@
         <entry file="file://$PROJECT_DIR$/util/Util.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="25" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="25" />
-              <folding>
-                <element signature="e#24#70#0" expanded="true" />
-              </folding>
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -691,9 +638,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="25" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="25" />
-          <folding>
-            <element signature="e#24#70#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -765,9 +710,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#70#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -829,9 +772,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding>
-            <element signature="e#24#70#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -903,9 +844,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding>
-            <element signature="e#24#70#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,16 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/Util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="25" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="25" />
-          <folding>
-            <element signature="e#24#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/RandomForest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1076,21 +1005,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/process/Process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="e#23#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/process/Preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="227" column="65" selection-start-line="227" selection-start-column="65" selection-end-line="227" selection-end-column="65" />
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding>
             <element signature="e#24#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/util/Util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.5232558">
-            <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <first_editor vertical-scroll-proportion="0.24916944">
+            <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1104,16 +1051,6 @@
       </provider>
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process/Process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3652968">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-          <folding>
-            <element signature="e#23#33#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
   </component>
