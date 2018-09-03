@@ -10,7 +10,8 @@ Env & Install:
 
 #### How to run:
 python3 process/Process.py
-input the model name from (nn, rf, xgb, blend, stacking)
+
+and then input one model name from (nn, rf, xgb, blend, stacking)
 
 #### Some brief explanation of the folder structure:
 
